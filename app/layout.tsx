@@ -36,7 +36,7 @@ export const metadata: ExtendedMetadata = {
     title: "Bhavin Official Portfolio",
     description:
       "Welcome to my portfolio – showcasing dynamic web development with React and Next.js.",
-    url: "http://localhost:3000",
+    url: "https://portfolio-owe6jiw2o-bhavins-projects-8fb46fc8.vercel.app/",
     type: "website",
     images: [
       {
@@ -64,7 +64,7 @@ export default function RootLayout({
         {/* SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="follow, index" />
-        <link rel="canonical" href="http://localhost:3000" />
+        <link rel="canonical" href="https://portfolio-owe6jiw2o-bhavins-projects-8fb46fc8.vercel.app/" />
         <meta
           property="og:title"
           content={
