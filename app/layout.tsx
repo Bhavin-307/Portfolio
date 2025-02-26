@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Head from "next/head";
 import Navbar from "@/components/navbar/Navbar";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const space_Grotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 
@@ -125,6 +126,7 @@ export default function RootLayout({
             {children}
             {/* FOOTER */}
             <Analytics />
+            <SpeedInsights />
           </div>
         </ThemeProvider>
       </body>
