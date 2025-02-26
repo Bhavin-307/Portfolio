@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Head from "next/head";
 import Navbar from "@/components/navbar/Navbar";
+import { Analytics } from '@vercel/analytics/next';
 
 const space_Grotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 
@@ -123,6 +124,7 @@ export default function RootLayout({
             {/* MAIN */}
             {children}
             {/* FOOTER */}
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
