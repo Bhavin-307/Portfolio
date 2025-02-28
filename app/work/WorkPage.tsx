@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import getProject from "@/api/cron/route";
 import ShineBorder from "@/components/ui/shine-border";
@@ -62,6 +63,7 @@ function Project() {
             <div
               className={`grid gap-6   gap-y-6 py-6 md:grid-cols-2  rounded-xl lg:grid-cols-3 `}
             >
+            
               {data?.project?.map((post: any) => (
                 <ShineBorder
                   key={post?._id}
