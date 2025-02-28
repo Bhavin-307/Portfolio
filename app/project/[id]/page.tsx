@@ -30,3 +30,4 @@ const Project = async ({ params }: { params: { id: string } }) => {
 };
 
 export default Project;
+
