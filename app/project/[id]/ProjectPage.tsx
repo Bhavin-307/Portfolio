@@ -34,7 +34,6 @@ const ProjectPage = ({ project }: ProjectPageProps) => {
   return (
     <div className=" p-8 max-w-7xl mx-auto mt-28 mb-10 dark:bg-[#020617] bg-slate-100 rounded-xl border-[1px] dark:border-slate-500/10 border-slate-500/5 ">
       <div className="pb-5">
-        {/* <Link href="/projects"> */}
         <HoverBorderGradient
           onClick={handelClick}
           containerClassName="rounded-full"
