@@ -1,29 +1,55 @@
-import React from "react";
-import SkeletonUI2 from "./SkeletonUI2";
-import Link from "next/link";
-import { RainbowButton } from "./magicui/rainbow-button";
+"use client";
 
-const Projects = () => {
+import getProject from "@/api/cron/route";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { RainbowButton } from "./magicui/rainbow-button";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
+import { HiViewGridAdd } from "react-icons/hi";
+import { MdOpenInNew } from "react-icons/md";
+import SkeletonUI2 from "./SkeletonUI2";
+import { useQuery } from "@tanstack/react-query";
+
+export function Projects() {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ["project"],
+    queryFn: async () => {
+      return await getProject();
+    },
+    staleTime: 60000,
+  });
+
+  if (isError) {
+    return <div>{String(error)}</div>;
+  }
+
+  const post = data?.project?.slice(0, 2);
   return (
     <div className="bg-slate-100 dark:bg-[#020617] ">
       <div className="max-w-7xl  mx-auto py-20 flex flex-col items-center justify-center px-4 lg:px-6">
+        {/* Title Section */}
         <h2 className=" text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 from-10% via-violet-500 via-30% to-sky-500 to-90%">
-          My Project
+          My Projects
         </h2>
         <p className="mt-4 text-base leading-relaxed ">
-          This page is under developement
+          Here are some of my projects I have done.
         </p>
-        <div className="grid gap-6 py-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
-          <SkeletonUI2 />
-          <SkeletonUI2 />
-          <SkeletonUI2 />
-          <SkeletonUI2 />
-          <SkeletonUI2 />
-          <SkeletonUI2 />
-        </div>
+
+        {/* Skeleton UI */}
+        {isLoading && (
+          <div className="grid gap-6 py-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
+            <SkeletonUI2 />
+            <SkeletonUI2 />
+            <SkeletonUI2 />
+            <SkeletonUI2 />
+            <SkeletonUI2 />
+            <SkeletonUI2 />
+          </div>
+        )}
 
         {/* Project Cards */}
-        {/* {!isLoading && (
+        {!isLoading && (
           <div className="grid gap-6 py-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
             {post?.map((post: any) => (
               <div
@@ -59,16 +85,16 @@ const Projects = () => {
                       ? post?.details.substring(0, 80).concat("...")
                       : post?.details}
                   </p>
-                </div> */}
+                </div>
                 {/* Button Container */}
-                {/* <div className="absolute inset-x-0 bottom-3 flex justify-center items-center space-x-2 transition-all duration-300 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="absolute inset-x-0 bottom-3 flex justify-center items-center space-x-2 transition-all duration-300 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0">
                   <div>
                     <Link
                       href={post?.sourceCode}
                       target="_blank"
                       className="flex gap-x-1 items-center"
                     >
-                      
+                      {/* <button className="flex gap-x-1 items-center rounded-lg shadow-md px-3 py-2.5 text-sm font-semibold bg-slate-800 text-white hover:bg-slate-700"> */}
                       <HoverBorderGradient
                         containerClassName="rounded-lg"
                         as="button"
@@ -77,13 +103,13 @@ const Projects = () => {
                         <FaGithub className="font-extrabold text-lg mr-1" />{" "}
                         GitHub
                       </HoverBorderGradient>
-                     
+                      {/* </button> */}
                     </Link>
                   </div>
                   {post?.liveLink && (
                     <div>
                       <Link href={post?.liveLink} target="_blank">
-                       
+                        {/* <button className="rounded-lg flex gap-x-1 items-center shadow-md px-3 py-2.5 text-sm font-semibold bg-indigo-500 text-white hover:bg-indigo-600"> */}
                         <HoverBorderGradient
                           containerClassName="rounded-lg"
                           as="button"
@@ -92,7 +118,7 @@ const Projects = () => {
                           <MdOpenInNew className="font-extrabold text-lg mr-1" />{" "}
                           Live
                         </HoverBorderGradient>
-                        
+                        {/* </button> */}
                       </Link>
                     </div>
                   )}
@@ -101,7 +127,7 @@ const Projects = () => {
                       href={`/project/${post?._id}`}
                       className="flex gap-x-1 items-center"
                     >
-                      
+                      {/* <button className="flex gap-x-1 items-center rounded-lg shadow-md px-3 py-2.5 text-sm font-semibold bg-slate-800 text-white hover:bg-slate-700"> */}
                       <HoverBorderGradient
                         containerClassName="rounded-lg"
                         as="button"
@@ -110,24 +136,24 @@ const Projects = () => {
                         <HiViewGridAdd className="font-extrabold text-lg mr-1" />{" "}
                         Details
                       </HoverBorderGradient>
-                     
+                      {/* </button> */}
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        )} */}
+        )}
 
         {/* Footer Section */}
         <div className="flex justify-center items-center text-center">
-          <Link href={"/work"}>
+          <Link href={"/projects"}>
             <RainbowButton>More Projects</RainbowButton>
           </Link>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Projects;
+export default Projects

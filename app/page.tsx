@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection'
 import React from 'react'
 import Projects from '../components/Projects'
 import HireMe from '@/components/HireMe'
+import Footer from '@/components/Footer'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <FeatureFour />
       <Projects />
       <HireMe />
+      <Footer />
     </div>
   )
 }
