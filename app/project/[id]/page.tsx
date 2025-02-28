@@ -15,8 +15,9 @@ async function getProject(id: string)  {
   }
 }
 
-const Project = async ({ params }: { params: { id: string } }) => {
-  const project = await getProject(params.id);
+const Project = async ({params}: {params: Promise<{ id: string }>}) => {
+  const { id } = await params;
+  const project = await getProject(id);
 
   if (!project) {
     return <div>Project not found.</div>;
