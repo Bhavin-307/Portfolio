@@ -148,7 +148,7 @@ export function Projects() {
 
         {/* Footer Section */}
         <div className="flex justify-center items-center text-center">
-          <Link href={"/projects"}>
+          <Link href={"/work"}>
             <RainbowButton>More Projects</RainbowButton>
           </Link>
         </div>

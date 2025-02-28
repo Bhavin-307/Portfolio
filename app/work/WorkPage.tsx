@@ -101,16 +101,6 @@ function Project() {
                           ? post?.details.substring(0, 150).concat("...")
                           : post?.details}
                       </p>
-                      {/* {post?.tags.length > 0 ? (
-                        <div className="flex flex-row justify-center lowercase items-center mt-4 space-x-2">
-                          <p className=" font-semibold capitalize">Tags:</p>
-                          {post?.tags.map((tag: any) => (
-                            <span className="text-sm ">{tag}</span>
-                          ))}
-                        </div>
-                      ) : (
-                        ""
-                      )} */}
 
                       <div className="mt-4 flex lg:space-x-3 space-x-2 ">
                         <Image
@@ -138,10 +128,6 @@ function Project() {
                             target="_blank"
                             className="transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0"
                           >
-                            {/* <button className="inset-x-0 flex gap-x-1 items-center rounded-lg shadow-md px-3 py-2.5 text-sm font-semibold transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 bg-slate-800 text-white hover:bg-slate-700/90">
-                              <FaGithub className="font-extrabold text-lg" />{" "}
-                              Code
-                            </button> */}
                             <HoverBorderGradient
                               containerClassName="rounded-lg"
                               as="button"
@@ -160,10 +146,6 @@ function Project() {
                                 target="_blank"
                                 className="transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0"
                               >
-                                {/* <button className="inset-x-0 flex gap-x-1 items-center rounded-lg shadow-md px-3 py-2.5 text-sm font-semibold transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 bg-indigo-500 text-white hover:bg-indigo-600">
-                                  <MdOpenInNew className="font-extrabold text-lg" />{" "}
-                                  Live
-                                </button> */}
                                 <HoverBorderGradient
                                   containerClassName="rounded-lg"
                                   as="button"
