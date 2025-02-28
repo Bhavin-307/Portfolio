@@ -1,21 +1,7 @@
 import { URL } from "@/api/cron/route";
 import ProjectPage from "./ProjectPage";
 
-interface ProjectType {
-  id: string;
-  title: string;
-  details: string;
-  tags: string[];
-  category: string;
-  author: string;
-  avatar: string;
-  createdAt: string;
-  sourceCode: string;
-  liveLink: string;
-  image: string;
-}
-
-async function getProject(id: string): Promise<ProjectType | null>  {
+async function getProject(id: string)  {
   try {
     const response = await fetch(`${URL}/project/${id}`, { cache: "no-store" });
     if (!response.ok) {
