@@ -23,6 +23,7 @@ const Project = async ({ params }: { params: { id: string } }) => {
     return <div>Project not found.</div>;
   }
 
+  
   return (
     <>
       <ProjectPage project={project} />
