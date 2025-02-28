@@ -8,7 +8,7 @@ I am a passionate developer with expertise in web technologies, creating modern,
 
 ## 🌐 Live Portfolio
 
-Check out my live portfolio: [Click this 🔥](https://portfolio-one-bay-58.vercel.app/)
+Check out my live portfolio: [Click this 🔥]([https://portfolio-one-bay-58.vercel.app/])
 
 ## 📁 Project Structure
 
