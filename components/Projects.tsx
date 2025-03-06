@@ -25,7 +25,7 @@ export function Projects() {
     return <div>{String(error)}</div>;
   }
 
-  const post = data?.project?.slice(0, 2);
+  const post = data?.project?.slice(0, 7);
   return (
     <div className="bg-slate-100 dark:bg-[#020617] ">
       <div className="max-w-7xl  mx-auto py-20 flex flex-col items-center justify-center px-4 lg:px-6">

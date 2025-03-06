@@ -74,9 +74,9 @@ For any inquiries, feel free to reach out:
 
 Email: bhavinsali1470@gmail.com
 
-LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/bhavin-s307/)
+LinkedIn: [ LinkedIn Profile](https://www.linkedin.com/in/bhavin-s307/)
 
-Twitter: [Your Twitter Profile](https://x.com/bhavin_sali307)
+Twitter: [ Twitter Profile](https://x.com/bhavin_sali307)
 
 ## ⭐ Show Your Support
 
