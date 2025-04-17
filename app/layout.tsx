@@ -113,7 +113,7 @@ export default function RootLayout({
           crossOrigin=""
         />
       </Head>
-      <body className={space_Grotesk.className}>
+      <body className={space_Grotesk.className} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
