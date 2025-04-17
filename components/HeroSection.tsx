@@ -97,7 +97,7 @@ const HeroSection = () => {
             <div className="mt-5">
               <div className="flex mt-5 gap-x-2 border-white border-collapse rounded">
                 <a
-                  href="../../full_stack_developer_resume.pdf"
+                  href="../../Bhavin Sali Resume.pdf.pdf"
                   target="_blank"
                   download="full_stack_developer_resume_of_bhavin.pdf"
                 >
