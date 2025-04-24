@@ -20,9 +20,6 @@ export default function NavbarItem({ label, href }: NavbarItemProps) {
         }`}
       >
         {label}
-        <span>
-          <ChevronDown className="ml-1 h-4 w-4" />
-        </span>
       </Link>
     </li>
   );

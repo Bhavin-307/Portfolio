@@ -19,7 +19,7 @@ export default function NavbarItemMB({ label, href }: NavbarItemProps) {
       <Link
         href={href}
         onClick={toggleMenu}
-        className={`-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-slate-200 dark:hover:bg-slate-800 ${
+        className={`-m-3 flex items-center rounded-md p-3 text-sm font-semibold  ${
           isActive ? "underline underline-offset-4 " : ""
         }`}
       >
